@@ -1,0 +1,42 @@
+{
+    "tab1s": "ddd",
+    "resourceBundleName": "CustomTabBar.bundle",
+    "bglightImageName": "bglight.png",
+    "btns": [
+             {
+             "controllerName": "RootViewController",
+             "default": "tab1.png",
+             "heighlighted": "tab1_t.png",
+             "selected": "tab1_t.png",
+             "indicatorImage": "indicator.png"
+             },
+             {
+             "controllerName": "sssViewController",
+             "default": "tab2.png",
+             "heighlighted": "tab2_t.png",
+             "selected": "tab2_t.png",
+             "indicatorImage": "indicator.png"
+             },
+             {
+             "controllerName": "sssViewController",
+             "default": "tab3.png",
+             "heighlighted": "tab3_t.png",
+             "selected": "tab3_t.png",
+             "indicatorImage": "indicator.png"
+             },
+             {
+             "controllerName": "RootViewController",
+             "default": "tab4.png",
+             "heighlighted": "tab4_t.png",
+             "selected": "tab4_t.png",
+             "indicatorImage": "indicator.png"
+             },
+             {
+             "controllerName": "RootViewController",
+             "default": "tab5.png",
+             "heighlighted": "tab4_t.png",
+             "selected": "tab5_t.png",
+             "indicatorImage": "indicator.png"
+             }
+             ]
+}
