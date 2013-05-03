@@ -35,6 +35,8 @@
 @implementation CustomTabBarViewController
 @synthesize customView = _customView;
 @synthesize isHidden = _isHide;
+@synthesize logTrace ;
+
 static CustomTabBarViewController *_tabBarInstance;
 
 +(BOOL)isHidden
@@ -203,10 +205,7 @@ static CustomTabBarViewController *_tabBarInstance;
 
 -(id)initWithJSON:(NSString *)json_file_name{
     if (self = [super init]) {
-        
-  
         [self getConfigInfo:json_file_name];
-        
         self = [self init];
     }
     return self;

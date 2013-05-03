@@ -29,6 +29,7 @@
 
 @property (retain, nonatomic)CustomTabbar *customView;
 @property (assign, nonatomic)BOOL isHidden;
+@property (assign, nonatomic)BOOL logTrace;
 
 -(id)initWithJSON:(NSString *)json_file_name;
 -(id)initWithBundleName:(NSString *)bundle_file_name;
