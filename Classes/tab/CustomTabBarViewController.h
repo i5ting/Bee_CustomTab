@@ -4,10 +4,10 @@
 //
 //  Copyright 2012 sina. All rights reserved.
 //
-#import "CustomTabbar.h"  
+
 #import <UIKit/UIKit.h>
 
-
+#import "Bee_TabbarItem.h"
 @interface UIViewController(CXTabViewController)
 
 /**
@@ -21,13 +21,15 @@
 
 @interface CustomTabBarViewController : UITabBarController<UITabBarControllerDelegate,CustomTabbarDelegate> {
 	UIView *_contentView;
-    CustomTabbar *_customView; 
+    Bee_TabbarItem *_customView; 
     UIImageView *bgView;
     BOOL _isHide;
     NSMutableArray *__controllerArray;
+    NSDictionary *__configDict;
+    NSString *__bundleName;
 }
 
-@property (retain, nonatomic)CustomTabbar *customView;
+@property (retain, nonatomic)Bee_TabbarItem *customView;
 @property (assign, nonatomic)BOOL isHidden;
 @property (assign, nonatomic)BOOL logTrace;
 

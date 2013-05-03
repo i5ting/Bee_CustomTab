@@ -9,9 +9,13 @@
 #import "sssViewController.h"
 #import "JSONKit.h"
 
-#define TAB_CONTROLLER_TAB_HIDDEN_Y 480.0f
-#define TAB_CONTROLLER_TAB_VISIBLE_Y 436.0f
+//改用 UI_MAX_HEIGHT 处理，兼容iphone5
+//
+//#define TAB_CONTROLLER_TAB_HIDDEN_Y 480.0f
+//#define TAB_CONTROLLER_TAB_VISIBLE_Y 436.0f
 #define TAB_CONTROLLER_TAB_HEIGHT 44.0f
+
+
 
 
 
@@ -53,7 +57,7 @@ static CustomTabBarViewController *_tabBarInstance;
 }
 
 #pragma mark - CustomTabBarDelegate
-- (void)customTabbar:(CustomTabbar*)customTabbar didSelectTab:(int)tabIndex{
+- (void)customTabbar:(Bee_TabbarItem*)customTabbar didSelectTab:(int)tabIndex{
     //    [customTabbar selectTabAtIndex:tabIndex];
     //    self.selectedIndex = tabIndex;
     [self selectTab:tabIndex];
@@ -74,7 +78,7 @@ static CustomTabBarViewController *_tabBarInstance;
 	else {
 		_contentView = [self.view.subviews objectAtIndex:0];
 	}
-	_contentView.frame = CGRectMake(0, 0, 320, 480);
+	_contentView.frame = CGRectMake(0, 0, 320, UI_MAX_HEIGHT);
 	for(UIView *view in self.view.subviews){
 		if([view isKindOfClass:[UITabBar class]]){
 			view.alpha = 0;
@@ -93,10 +97,10 @@ static CustomTabBarViewController *_tabBarInstance;
     if (__controllerArray == nil) {
         return;
     }
-    _customView = [[CustomTabbar alloc] initWithFrame:CGRectMake(0, 0, 320, 44) andConfigArray:__controllerArray];
+    _customView = [[Bee_TabbarItem alloc] initWithFrame:CGRectMake(0, 0, 320, 44) andBundleName:__bundleName andConfigArray:__controllerArray];
     [_customView selectTabAtIndex:0];
     _customView.delegate = self;
-    _customView.frame = CGRectMake(0, TAB_CONTROLLER_TAB_VISIBLE_Y, 320, TAB_CONTROLLER_TAB_HEIGHT);
+    _customView.frame = CGRectMake(0, UI_MAX_HEIGHT - TAB_CONTROLLER_TAB_HEIGHT, 320, TAB_CONTROLLER_TAB_HEIGHT);
     [self.view addSubview:_customView];
     [self selectTab:0];
 }
@@ -110,14 +114,14 @@ static CustomTabBarViewController *_tabBarInstance;
 	if (hidden) {
 		[UIView beginAnimations:nil context:nil];
 		[UIView setAnimationDuration:durTime];
-        bgView.frame = CGRectMake(0, TAB_CONTROLLER_TAB_HIDDEN_Y, 320, 59);;
-        _customView.frame = CGRectMake(_customView.frame.origin.x, TAB_CONTROLLER_TAB_HIDDEN_Y, _customView.frame.size.width, _customView.frame.origin.y);
+        bgView.frame = CGRectMake(0, UI_MAX_HEIGHT, 320, 59);;
+        _customView.frame = CGRectMake(_customView.frame.origin.x, UI_MAX_HEIGHT, _customView.frame.size.width, _customView.frame.origin.y);
 		[UIView commitAnimations];
 	}else {
 		[UIView beginAnimations:nil context:nil];
 		[UIView setAnimationDuration:durTime];        
-        bgView.frame = CGRectMake(0, TAB_CONTROLLER_TAB_VISIBLE_Y, 320, 59);;
-        _customView.frame = CGRectMake(_customView.frame.origin.x, TAB_CONTROLLER_TAB_VISIBLE_Y, _customView.frame.size.width, _customView.frame.origin.y);
+        bgView.frame = CGRectMake(0, UI_MAX_HEIGHT - TAB_CONTROLLER_TAB_HEIGHT, 320, 59);;
+        _customView.frame = CGRectMake(_customView.frame.origin.x, UI_MAX_HEIGHT - TAB_CONTROLLER_TAB_HEIGHT , _customView.frame.size.width, _customView.frame.origin.y);
 		[UIView commitAnimations];
 	}
 }
@@ -145,57 +149,23 @@ static CustomTabBarViewController *_tabBarInstance;
     _tabBarInstance = self;
 	if (self) {
 		self.delegate = self;
-        bgView = [UIImageView new];
-        bgView.frame = CGRectMake(0, TAB_CONTROLLER_TAB_VISIBLE_Y, 320, 59);;
-        
-        bgView.image = [UIImage imageNamed:@"CustomTabBar.bundle/tab_bg_0227.png"];
-        [self.view insertSubview:bgView belowSubview:_customView];
-        
-        
-        NSMutableArray *_controllersArray = [NSMutableArray array];
-        
-        for (NSDictionary *d in  __controllerArray) {
-            id _myViewController = [[NSClassFromString((NSString *)[d objectForKey:@"controllerName"]) alloc] init];
-            UINavigationController *topicNavigationController = [[[UINavigationController alloc] initWithRootViewController:_myViewController] autorelease];
-            topicNavigationController.navigationBar.hidden = YES;
-            [_controllersArray addObject:topicNavigationController];
-        }
-        
-        
-        
-//        RootViewController *topicNewsViewController = [[[RootViewController alloc] init] autorelease];
-//        UINavigationController *topicNavigationController = [[[UINavigationController alloc] initWithRootViewController:topicNewsViewController] autorelease];
-//        topicNavigationController.navigationBar.hidden = YES;
-//        
-//        sssViewController *opnionViewController = [[[sssViewController alloc] init] autorelease];
-//        UINavigationController *opnionNavigationController = [[[UINavigationController alloc] initWithRootViewController:opnionViewController] autorelease];
-//        opnionNavigationController.navigationBar.hidden = YES;
-//        
-//        RootViewController *visionsViewController = [[[RootViewController alloc] init] autorelease];
-//        UINavigationController *visionsNavigationController = [[[UINavigationController alloc] initWithRootViewController:visionsViewController] autorelease];
-//        visionsNavigationController.navigationBar.hidden = YES;
-//        
-//        RootViewController *updatesViewController = [[[RootViewController alloc] init] autorelease];
-//        UINavigationController *updatesNavigationController = [[[UINavigationController alloc] initWithRootViewController:updatesViewController] autorelease];
-//        updatesNavigationController.navigationBar.hidden = YES;
-//        
-//        RootViewController *allTheViewController = [[[RootViewController alloc] init] autorelease];
-//        UINavigationController *allTheNavigationController = [[[UINavigationController alloc] initWithRootViewController:allTheViewController] autorelease];
-//        allTheNavigationController.navigationBar.hidden = YES;
-        
-        __controllerArray = _controllersArray;
-        [self setViewControllers:_controllersArray];
+        [self bg_image_setting];
+        [self tab_image_setting];
     }
 	return self;
 }
 
 -(id)initWithBundleName:(NSString *)bundle_file_name{
     if (self = [super init]) {
+       
+        
         NSString *json_file_name;
         if ([bundle_file_name hasSuffix:@"bundle"]) {
             json_file_name = [NSString stringWithFormat:@"%@/tab.config.json",bundle_file_name];
+             __bundleName = bundle_file_name;
         }else{
             json_file_name = [NSString stringWithFormat:@"%@.bundle/tab.config.json",bundle_file_name];
+             __bundleName = [NSString stringWithFormat:@"%@.bundle",bundle_file_name];;
         }
         
         self = [self initWithJSON:json_file_name];
@@ -277,8 +247,69 @@ static CustomTabBarViewController *_tabBarInstance;
     }
     NSDictionary *cemotionArray = [commentStr objectFromJSONString];
     
-    
+    __configDict = cemotionArray;
     __controllerArray = [cemotionArray objectForKey:@"btns"];
+}
+
+#pragma mark - tab
+
+- (void)bg_image_setting
+{
+    bgView = [UIImageView new];
+    bgView.frame = CGRectMake(0, UI_MAX_HEIGHT - TAB_CONTROLLER_TAB_HEIGHT, 320, 59);;
+    
+    if ([[__configDict objectForKey:@"tab_bg"] isKindOfClass:[NSString class] ]) {
+        NSLog(@"ss");
+        bgView.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@/%@",__bundleName,(NSString *)[__configDict objectForKey:@"tab_bg"]]];
+    }
+    
+    if ([[__configDict objectForKey:@"tab_bg"] isKindOfClass:[NSDictionary class] ]) {
+        NSLog(@"ss");
+        
+        NSDictionary *_config = [__configDict objectForKey:@"tab_bg"];
+        
+        bgView.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@/%@",__bundleName,(NSString *)[_config objectForKey:@"name"]]];
+      
+        bgView.frame = [self getRect:[_config objectForKey:@"frame"]];
+        
+    }
+    [self.view insertSubview:bgView belowSubview:_customView];
+}
+
+
+- (void)tab_image_setting
+{
+    NSMutableArray *_controllersArray = [NSMutableArray array];
+    
+    for (NSDictionary *d in  __controllerArray) {
+        id _myViewController = [[NSClassFromString((NSString *)[d objectForKey:@"controllerName"]) alloc] init];
+        UINavigationController *topicNavigationController = [[[UINavigationController alloc] initWithRootViewController:_myViewController] autorelease];
+        topicNavigationController.navigationBar.hidden = YES;
+        [_controllersArray addObject:topicNavigationController];
+    }
+    
+    __controllerArray = _controllersArray;
+    [self setViewControllers:_controllersArray];
+}
+
+#pragma mark - utils
+
+
+
+-(CGRect)getRect:(NSDictionary *)d
+{
+    float l = [self getFloatValue:d key:@"l" defaultValue:0.0];
+    float t = [self getFloatValue:d key:@"t" defaultValue:0.0];
+    float w = [self getFloatValue:d key:@"w" defaultValue:0.0];
+    float h = [self getFloatValue:d key:@"h" defaultValue:0.0];
+//    480-436 = 44
+    return CGRectMake(0, UI_MAX_HEIGHT - 49, 320, 59);;
+    return CGRectMake(l, t, w, h);
+}
+
+-(float)getFloatValue:(NSDictionary *)d key:(NSString *)key defaultValue:(float)defaultValue
+{
+    return [[d objectForKey:key] floatValue] > 0 ? [[d objectForKey:key] floatValue] : defaultValue;
 }
 
 @end

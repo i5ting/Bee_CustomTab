@@ -1,0 +1,51 @@
+{
+    "tab1s": "ddd",
+    "tab_bg": {
+        "name": "tab_bar.png",
+        "frame": {
+            "l": 0,
+            "t": 0,
+            "w": 320,
+            "h": 49
+        }
+    },
+    "resourceBundleName": "CustomTabBar.bundle",
+    "bglightImageName": "bglight.png",
+    "btns": [
+             {
+             "controllerName": "RootViewController",
+             "default": "xiangqu.png",
+             "heighlighted": "xiangqu.png",
+             "selected": "xiangqu.png",
+             "indicatorImage": "indicator.png"
+             },
+             {
+             "controllerName": "sssViewController",
+             "default": "goods.png",
+             "heighlighted": "goods.png",
+             "selected": "goods.png",
+             "indicatorImage": "indicator.png"
+             },
+             {
+             "controllerName": "sssViewController",
+             "default": "feed.png",
+             "heighlighted": "feed.png",
+             "selected": "feed.png",
+             "indicatorImage": "indicator.png"
+             },
+             {
+             "controllerName": "RootViewController",
+             "default": "my.png",
+             "heighlighted": "my.png",
+             "selected": "my.png",
+             "indicatorImage": "indicator.png"
+             },
+             {
+             "controllerName": "RootViewController",
+             "default": "more.png",
+             "heighlighted": "more.png",
+             "selected": "more.png",
+             "indicatorImage": "indicator.png"
+             }
+             ]
+}

@@ -10,4 +10,6 @@
 
 @interface sssViewController : UIViewController
 
+-(IBAction)aaaaa:(id)sender;
+
 @end

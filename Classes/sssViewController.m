@@ -7,9 +7,12 @@
 //
 
 #import "sssViewController.h"
+#import "CustomTabBarViewController.h"
 
 @interface sssViewController ()
-
+{
+    int i ;
+}
 @end
 
 @implementation sssViewController
@@ -27,6 +30,7 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    i = 1;
 }
 
 - (void)viewDidUnload
@@ -41,4 +45,14 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
+
+-(IBAction)aaaaa:(id)sender{
+    if (i%2 == 1) {
+        [CustomTabBarViewController hide:YES animated:YES];
+    }else{
+        [CustomTabBarViewController hide:NO animated:YES];
+    }
+
+    i++;
+}
 @end

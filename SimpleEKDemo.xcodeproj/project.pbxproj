@@ -15,8 +15,10 @@
 		2892E4100DC94CBA00A64D0F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2892E40F0DC94CBA00A64D0F /* CoreGraphics.framework */; };
 		28C286E10D94DF7D0034E888 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */; };
 		5D10605D173261AA009A4C7B /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D10605C173261AA009A4C7B /* JSONKit.m */; };
+		5D10605F173350C2009A4C7B /* xiangqu.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5D10605E173350C2009A4C7B /* xiangqu.bundle */; };
+		5D10606117339371009A4C7B /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 5D10606017339371009A4C7B /* README.md */; };
+		5D106064173393EA009A4C7B /* Bee_TabbarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D106063173393EA009A4C7B /* Bee_TabbarItem.m */; };
 		5D492D81162E539900EB6CE8 /* CustomTabBar.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5D492D7B162E539900EB6CE8 /* CustomTabBar.bundle */; };
-		5D492D82162E539900EB6CE8 /* CustomTabbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D492D7D162E539900EB6CE8 /* CustomTabbar.m */; };
 		5D492D84162E539900EB6CE8 /* CustomTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D492D80162E539900EB6CE8 /* CustomTabBarViewController.m */; };
 		5D492DAA162E5A9800EB6CE8 /* sssViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D492DA8162E5A9800EB6CE8 /* sssViewController.m */; };
 		5D492DAB162E5A9800EB6CE8 /* sssViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D492DA9162E5A9800EB6CE8 /* sssViewController.xib */; };
@@ -48,13 +50,13 @@
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5D10605B173261AA009A4C7B /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
 		5D10605C173261AA009A4C7B /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
+		5D10605E173350C2009A4C7B /* xiangqu.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = xiangqu.bundle; sourceTree = "<group>"; };
+		5D10606017339371009A4C7B /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		5D106062173393EA009A4C7B /* Bee_TabbarItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bee_TabbarItem.h; sourceTree = "<group>"; };
+		5D106063173393EA009A4C7B /* Bee_TabbarItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bee_TabbarItem.m; sourceTree = "<group>"; };
 		5D492D7B162E539900EB6CE8 /* CustomTabBar.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = CustomTabBar.bundle; sourceTree = "<group>"; };
-		5D492D7C162E539900EB6CE8 /* CustomTabbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTabbar.h; sourceTree = "<group>"; };
-		5D492D7D162E539900EB6CE8 /* CustomTabbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTabbar.m; sourceTree = "<group>"; };
 		5D492D7F162E539900EB6CE8 /* CustomTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTabBarViewController.h; sourceTree = "<group>"; };
 		5D492D80162E539900EB6CE8 /* CustomTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTabBarViewController.m; sourceTree = "<group>"; };
-		5D492D86162E54C700EB6CE8 /* UIViewAdditions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIViewAdditions.h; sourceTree = "<group>"; };
-		5D492D87162E54C700EB6CE8 /* UIViewAdditions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIViewAdditions.m; sourceTree = "<group>"; };
 		5D492DA7162E5A9800EB6CE8 /* sssViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sssViewController.h; sourceTree = "<group>"; };
 		5D492DA8162E5A9800EB6CE8 /* sssViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = sssViewController.m; sourceTree = "<group>"; };
 		5D492DA9162E5A9800EB6CE8 /* sssViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = sssViewController.xib; sourceTree = "<group>"; };
@@ -96,8 +98,6 @@
 			isa = PBXGroup;
 			children = (
 				5D492DA6162E5A7F00EB6CE8 /* t */,
-				5D492D86162E54C700EB6CE8 /* UIViewAdditions.h */,
-				5D492D87162E54C700EB6CE8 /* UIViewAdditions.m */,
 				5D492D7A162E539900EB6CE8 /* tab */,
 				7E8EE7E31194B0D70073914C /* SimpleEKDemoAppDelegate.h */,
 				7E8EE7E21194B0D70073914C /* SimpleEKDemoAppDelegate.m */,
@@ -118,6 +118,7 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				5D10606017339371009A4C7B /* README.md */,
 				5D10605A173261AA009A4C7B /* JSONKit */,
 				7E8EEA9A1195EFF40073914C /* ReadMe.txt */,
 				080E96DDFE201D6D7F000001 /* Classes */,
@@ -175,13 +176,14 @@
 		5D492D7A162E539900EB6CE8 /* tab */ = {
 			isa = PBXGroup;
 			children = (
+				5D10605E173350C2009A4C7B /* xiangqu.bundle */,
 				5D492D7B162E539900EB6CE8 /* CustomTabBar.bundle */,
-				5D492D7C162E539900EB6CE8 /* CustomTabbar.h */,
-				5D492D7D162E539900EB6CE8 /* CustomTabbar.m */,
 				5D492D7F162E539900EB6CE8 /* CustomTabBarViewController.h */,
 				5D492D80162E539900EB6CE8 /* CustomTabBarViewController.m */,
 				5D492DAC162E5E9500EB6CE8 /* CustomerTab.h */,
 				25327ED8162EFDA4001543A5 /* config.json */,
+				5D106062173393EA009A4C7B /* Bee_TabbarItem.h */,
+				5D106063173393EA009A4C7B /* Bee_TabbarItem.m */,
 			);
 			path = tab;
 			sourceTree = "<group>";
@@ -274,6 +276,8 @@
 				5D492DAE162E856800EB6CE8 /* Default-568h@2x.png in Resources */,
 				25327ED9162EFDA4001543A5 /* config.json in Resources */,
 				25327EDD162F0100001543A5 /* MainWindow.xib in Resources */,
+				5D10605F173350C2009A4C7B /* xiangqu.bundle in Resources */,
+				5D10606117339371009A4C7B /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,10 +291,10 @@
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
 				28C286E10D94DF7D0034E888 /* RootViewController.m in Sources */,
 				7E8EE7E41194B0D70073914C /* SimpleEKDemoAppDelegate.m in Sources */,
-				5D492D82162E539900EB6CE8 /* CustomTabbar.m in Sources */,
 				5D492D84162E539900EB6CE8 /* CustomTabBarViewController.m in Sources */,
 				5D492DAA162E5A9800EB6CE8 /* sssViewController.m in Sources */,
 				5D10605D173261AA009A4C7B /* JSONKit.m in Sources */,
+				5D106064173393EA009A4C7B /* Bee_TabbarItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

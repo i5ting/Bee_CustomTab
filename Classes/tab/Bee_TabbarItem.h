@@ -1,27 +1,25 @@
 //
-//  CustomTabbar.h
-//  CaiXin
+//  Bee_TabbarItem.h
+//  SimpleEKDemo
 //
-//  Created by Rainbow Zhang on 11/4/11.
-//  Copyright (c) 2011 iTotemStudio. All rights reserved.
+//  Created by sang on 5/3/13.
+//
 //
 
 #import <UIKit/UIKit.h>
+
 @protocol CustomTabbarDelegate;
 
-@interface CustomTabbar : UIView
+@interface Bee_TabbarItem : UIView
 {
     int __count;
 }
 
 @property (nonatomic, assign) id<CustomTabbarDelegate> delegate;
 @property (retain, nonatomic) IBOutlet UIButton *newsBtn;
-@property (retain, nonatomic) IBOutlet UIButton *opinionBtn;
-@property (retain, nonatomic) IBOutlet UIButton *audioVisualBtn;
-@property (retain, nonatomic) IBOutlet UIButton *latestBtn;
-@property (retain, nonatomic) IBOutlet UIButton *allBtn;
+
 @property (retain, nonatomic) IBOutlet UIImageView *highlightView;
- 
+
 @property (retain, nonatomic) IBOutlet UIImageView *indicator0;
 @property (retain, nonatomic) IBOutlet UIImageView *indicator1;
 @property (retain, nonatomic) IBOutlet UIImageView *indicator2;
@@ -32,12 +30,14 @@
 @property (retain, nonatomic) IBOutlet UILabel *updateLabel3;
 
 - (void)selectTabAtIndex:(int)index;
-- (id)initWithFrame:(CGRect)frame andConfigArray:(NSArray *)configArray;
+- (id)initWithFrame:(CGRect)frame andBundleName:(NSString *)bundleName andConfigArray:(NSArray *)configArray;
 
 @end
 
+
+
 @protocol CustomTabbarDelegate <NSObject>
 
-- (void)customTabbar:(CustomTabbar*)customTabbar didSelectTab:(int)tabIndex;
+- (void)customTabbar:(Bee_TabbarItem*)customTabbar didSelectTab:(int)tabIndex;
 
 @end
