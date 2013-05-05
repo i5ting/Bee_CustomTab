@@ -10,6 +10,8 @@
 		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
+		2504A2761736A31E009D8C54 /* Bee_TabbarItemTmpl.m in Sources */ = {isa = PBXBuildFile; fileRef = 2504A2751736A31E009D8C54 /* Bee_TabbarItemTmpl.m */; };
+		2504A27A1736B01D009D8C54 /* Bee_TabbarItem1.m in Sources */ = {isa = PBXBuildFile; fileRef = 2504A2791736B01D009D8C54 /* Bee_TabbarItem1.m */; };
 		25327ED9162EFDA4001543A5 /* config.json in Resources */ = {isa = PBXBuildFile; fileRef = 25327ED8162EFDA4001543A5 /* config.json */; };
 		25327EDD162F0100001543A5 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25327EDB162F0100001543A5 /* MainWindow.xib */; };
 		2892E4100DC94CBA00A64D0F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2892E40F0DC94CBA00A64D0F /* CoreGraphics.framework */; };
@@ -41,6 +43,10 @@
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1D6058910D05DD3D006BFB54 /* SimpleEKDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleEKDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		2504A2741736A31E009D8C54 /* Bee_TabbarItemTmpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bee_TabbarItemTmpl.h; sourceTree = "<group>"; };
+		2504A2751736A31E009D8C54 /* Bee_TabbarItemTmpl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bee_TabbarItemTmpl.m; sourceTree = "<group>"; };
+		2504A2781736B01D009D8C54 /* Bee_TabbarItem1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bee_TabbarItem1.h; sourceTree = "<group>"; };
+		2504A2791736B01D009D8C54 /* Bee_TabbarItem1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bee_TabbarItem1.m; sourceTree = "<group>"; };
 		25327ED8162EFDA4001543A5 /* config.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = config.json; sourceTree = "<group>"; };
 		25327EDC162F0100001543A5 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
 		2892E40F0DC94CBA00A64D0F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -184,6 +190,10 @@
 				25327ED8162EFDA4001543A5 /* config.json */,
 				5D106062173393EA009A4C7B /* Bee_TabbarItem.h */,
 				5D106063173393EA009A4C7B /* Bee_TabbarItem.m */,
+				2504A2741736A31E009D8C54 /* Bee_TabbarItemTmpl.h */,
+				2504A2751736A31E009D8C54 /* Bee_TabbarItemTmpl.m */,
+				2504A2781736B01D009D8C54 /* Bee_TabbarItem1.h */,
+				2504A2791736B01D009D8C54 /* Bee_TabbarItem1.m */,
 			);
 			path = tab;
 			sourceTree = "<group>";
@@ -295,6 +305,8 @@
 				5D492DAA162E5A9800EB6CE8 /* sssViewController.m in Sources */,
 				5D10605D173261AA009A4C7B /* JSONKit.m in Sources */,
 				5D106064173393EA009A4C7B /* Bee_TabbarItem.m in Sources */,
+				2504A2761736A31E009D8C54 /* Bee_TabbarItemTmpl.m in Sources */,
+				2504A27A1736B01D009D8C54 /* Bee_TabbarItem1.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

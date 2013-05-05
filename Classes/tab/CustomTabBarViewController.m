@@ -18,7 +18,6 @@
 
 
 
-
 @interface CustomTabBarViewController()
 - (void)hideTabBar;
 - (void)addCustomElements;
@@ -57,7 +56,7 @@ static CustomTabBarViewController *_tabBarInstance;
 }
 
 #pragma mark - CustomTabBarDelegate
-- (void)customTabbar:(Bee_TabbarItem*)customTabbar didSelectTab:(int)tabIndex{
+- (void)customTabbar:(Bee_TabbarItemTmpl*)customTabbar didSelectTab:(int)tabIndex{
     //    [customTabbar selectTabAtIndex:tabIndex];
     //    self.selectedIndex = tabIndex;
     [self selectTab:tabIndex];
@@ -97,7 +96,7 @@ static CustomTabBarViewController *_tabBarInstance;
     if (__controllerArray == nil) {
         return;
     }
-    _customView = [[Bee_TabbarItem alloc] initWithFrame:CGRectMake(0, 0, 320, 44) andBundleName:__bundleName andConfigArray:__controllerArray];
+    _customView = [[Bee_TabbarItem1 alloc] initWithFrame:CGRectMake(0, 0, 320, 44) andBundleName:__bundleName andConfigArray:__controllerArray];
     [_customView selectTabAtIndex:0];
     _customView.delegate = self;
     _customView.frame = CGRectMake(0, UI_MAX_HEIGHT - TAB_CONTROLLER_TAB_HEIGHT, 320, TAB_CONTROLLER_TAB_HEIGHT);
@@ -293,8 +292,6 @@ static CustomTabBarViewController *_tabBarInstance;
 }
 
 #pragma mark - utils
-
-
 
 -(CGRect)getRect:(NSDictionary *)d
 {

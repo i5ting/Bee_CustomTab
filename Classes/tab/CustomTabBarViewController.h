@@ -7,7 +7,8 @@
 
 #import <UIKit/UIKit.h>
 
-#import "Bee_TabbarItem.h"
+#import "Bee_TabbarItemTmpl.h"
+#import "Bee_TabbarItem1.h"
 @interface UIViewController(CXTabViewController)
 
 /**
@@ -21,7 +22,7 @@
 
 @interface CustomTabBarViewController : UITabBarController<UITabBarControllerDelegate,CustomTabbarDelegate> {
 	UIView *_contentView;
-    Bee_TabbarItem *_customView; 
+    Bee_TabbarItemTmpl *_customView; 
     UIImageView *bgView;
     BOOL _isHide;
     NSMutableArray *__controllerArray;
@@ -29,7 +30,7 @@
     NSString *__bundleName;
 }
 
-@property (retain, nonatomic)Bee_TabbarItem *customView;
+@property (retain, nonatomic)Bee_TabbarItemTmpl *customView;
 @property (assign, nonatomic)BOOL isHidden;
 @property (assign, nonatomic)BOOL logTrace;
 
