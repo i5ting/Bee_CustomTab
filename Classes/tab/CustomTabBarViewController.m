@@ -307,7 +307,7 @@ static CustomTabBarViewController *_tabBarInstance;
     float w = [self getFloatValue:d key:@"w" defaultValue:0.0];
     float h = [self getFloatValue:d key:@"h" defaultValue:0.0];
 //    480-436 = 44
-    return CGRectMake(0, UI_MAX_HEIGHT - 49, 320, 59);;
+    return CGRectMake(0, UI_MAX_HEIGHT - 44, 320, 59);;
     return CGRectMake(l, t, w, h);
 }
 
@@ -315,5 +315,22 @@ static CustomTabBarViewController *_tabBarInstance;
 {
     return [[d objectForKey:key] floatValue] > 0 ? [[d objectForKey:key] floatValue] : defaultValue;
 }
+
+#pragma mark - 
+- (void)tap_on_btn_call_back:(int)index;
+{
+    [self log:[NSString stringWithFormat:@"tap_on_btn_call_back:%d",index]];
+}
+
+- (void)draw_with_dict:(NSDictionary *)d in_container:(UIView *)view
+{
+    [self log:@"draw_with_dict in_container"];
+}
+
+
+-(void)log:(NSString *)str{
+    NSLog(@"%@:%@",@"CustomTabBarViewController",str);
+}
+
 
 @end

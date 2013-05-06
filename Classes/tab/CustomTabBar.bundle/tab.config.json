@@ -1,5 +1,14 @@
 {
     "tab1s": "ddd",
+    "tab_bg": {
+        "name": "tab_bg_0227.png",
+        "frame": {
+            "l": 0,
+            "t": 0,
+            "w": 320,
+            "h": 49
+        }
+    },
     "resourceBundleName": "CustomTabBar.bundle",
     "bglightImageName": "bglight.png",
     "btns": [

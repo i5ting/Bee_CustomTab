@@ -46,6 +46,11 @@
 
 @protocol CustomTabbarDelegate <NSObject>
 
+- (void)tap_on_btn_call_back:(int)index;
+
+- (void)draw_with_dict:(NSDictionary *)d in_container:(UIView *)view;
+
+
 - (void)customTabbar:(Bee_TabbarItemTmpl*)customTabbar didSelectTab:(int)tabIndex;
 
 @end

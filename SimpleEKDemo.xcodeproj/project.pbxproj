@@ -20,6 +20,7 @@
 		5D10605F173350C2009A4C7B /* xiangqu.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5D10605E173350C2009A4C7B /* xiangqu.bundle */; };
 		5D10606117339371009A4C7B /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 5D10606017339371009A4C7B /* README.md */; };
 		5D106064173393EA009A4C7B /* Bee_TabbarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D106063173393EA009A4C7B /* Bee_TabbarItem.m */; };
+		5D47FAA31737A00100A4EB45 /* finiance1.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5D47FAA21737A00000A4EB45 /* finiance1.bundle */; };
 		5D492D81162E539900EB6CE8 /* CustomTabBar.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5D492D7B162E539900EB6CE8 /* CustomTabBar.bundle */; };
 		5D492D84162E539900EB6CE8 /* CustomTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D492D80162E539900EB6CE8 /* CustomTabBarViewController.m */; };
 		5D492DAA162E5A9800EB6CE8 /* sssViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D492DA8162E5A9800EB6CE8 /* sssViewController.m */; };
@@ -60,6 +61,7 @@
 		5D10606017339371009A4C7B /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		5D106062173393EA009A4C7B /* Bee_TabbarItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bee_TabbarItem.h; sourceTree = "<group>"; };
 		5D106063173393EA009A4C7B /* Bee_TabbarItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bee_TabbarItem.m; sourceTree = "<group>"; };
+		5D47FAA21737A00000A4EB45 /* finiance1.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = finiance1.bundle; sourceTree = SOURCE_ROOT; };
 		5D492D7B162E539900EB6CE8 /* CustomTabBar.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = CustomTabBar.bundle; sourceTree = "<group>"; };
 		5D492D7F162E539900EB6CE8 /* CustomTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTabBarViewController.h; sourceTree = "<group>"; };
 		5D492D80162E539900EB6CE8 /* CustomTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTabBarViewController.m; sourceTree = "<group>"; };
@@ -182,6 +184,7 @@
 		5D492D7A162E539900EB6CE8 /* tab */ = {
 			isa = PBXGroup;
 			children = (
+				5D47FAA21737A00000A4EB45 /* finiance1.bundle */,
 				5D10605E173350C2009A4C7B /* xiangqu.bundle */,
 				5D492D7B162E539900EB6CE8 /* CustomTabBar.bundle */,
 				5D492D7F162E539900EB6CE8 /* CustomTabBarViewController.h */,
@@ -288,6 +291,7 @@
 				25327EDD162F0100001543A5 /* MainWindow.xib in Resources */,
 				5D10605F173350C2009A4C7B /* xiangqu.bundle in Resources */,
 				5D10606117339371009A4C7B /* README.md in Resources */,
+				5D47FAA31737A00100A4EB45 /* finiance1.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

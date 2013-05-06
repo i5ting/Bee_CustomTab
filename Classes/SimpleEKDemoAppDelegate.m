@@ -65,7 +65,8 @@
 //    
 //    CustomTabBarViewController *tabbarController = [[CustomTabBarViewController alloc] initWithBundleName:@"CustomTabBar"];
     
-    CustomTabBarViewController *tabbarController = [[CustomTabBarViewController alloc] initWithBundleName:@"xiangqu"];
+        CustomTabBarViewController *tabbarController = [[CustomTabBarViewController alloc] initWithBundleName:@"finiance1"];
+//    CustomTabBarViewController *tabbarController = [[CustomTabBarViewController alloc] initWithBundleName:@"xiangqu"];
     self.window.frame = CGRectMake(0, 0, 320, UI_MAX_HEIGHT);
     self.window.rootViewController = tabbarController;
     [tabbarController release];
