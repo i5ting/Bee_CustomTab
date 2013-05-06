@@ -96,7 +96,14 @@ static CustomTabBarViewController *_tabBarInstance;
     if (__controllerArray == nil) {
         return;
     }
-    _customView = [[Bee_TabbarItem1 alloc] initWithFrame:CGRectMake(0, 0, 320, 44) andBundleName:__bundleName andConfigArray:__controllerArray];
+//    _customView = [[Bee_TabbarItem1 alloc] initWithFrame:CGRectMake(0, 0, 320, 44) andBundleName:__bundleName andConfigArray:__controllerArray];
+    
+    _customView = [[Bee_TabbarItem1 alloc] init];
+    [_customView setViewframe:CGRectMake(0, 0, 320, 44) ];
+    [_customView setConfigArray:__controllerArray];
+    [_customView setBundleName:__bundleName];
+    
+    [_customView showTab];
     [_customView selectTabAtIndex:0];
     _customView.delegate = self;
     _customView.frame = CGRectMake(0, UI_MAX_HEIGHT - TAB_CONTROLLER_TAB_HEIGHT, 320, TAB_CONTROLLER_TAB_HEIGHT);

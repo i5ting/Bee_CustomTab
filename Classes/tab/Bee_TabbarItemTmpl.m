@@ -12,6 +12,8 @@
 
 #define CUSTOM_TABBAR_ORIGIN_INSETS UIEdgeInsetsMake(1.0,3.0,3.0,3.0)
 
+@synthesize viewframe,bundleName,configArray;
+
  
 @synthesize indicator0;
 @synthesize indicator1;
@@ -27,48 +29,102 @@
 
 @synthesize highlightView;
 
-- (id)initWithFrame:(CGRect)frame andBundleName:(NSString *)bundleName andConfigArray:(NSArray *)configArray
+
+
+- (id)init
 {
-    self = [super initWithFrame:frame];
+    self = [super initWithFrame:self.viewframe];
     if (self) {
         
-        __count = [configArray count];
-        UIEdgeInsets originInsets = CUSTOM_TABBAR_ORIGIN_INSETS;
-        
-        
-        int _width = 320/[configArray count];
-        
-        
-        int i = 1;
-        
-        highlightView = [[UIImageView alloc] init];
-        highlightView.frame = CGRectMake(0, 20, 320/5, 29);
-        
-        [highlightView setImage:[UIImage imageNamed:[NSString stringWithFormat:@"%@/%@",bundleName,@"bglight.png"]]];
-        
-        [self addSubview:highlightView];
-        
-        for (NSDictionary *d in configArray) {
-            NSString *defaultImg = [NSString stringWithFormat:@"%@/%@",bundleName,(NSString *)[d objectForKey:@"default"]];
-            NSString *selectedImg = [NSString stringWithFormat:@"%@/%@",bundleName,(NSString *)[d objectForKey:@"selected"]];
-            
-            UIButton  *_newsBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-            _newsBtn.tag = 10357+i;
-            _newsBtn.frame = CGRectMake(_width*(i - 1), 0, _width, 49);
-            [_newsBtn setImage:[UIImage imageNamed:defaultImg] forState:UIControlStateNormal];
-            [_newsBtn setImage:[UIImage imageNamed:selectedImg] forState:UIControlStateSelected];
-            [_newsBtn setOpaque:NO];
-            _newsBtn.contentEdgeInsets = originInsets;
-            
-            i++;
-            
-            [_newsBtn addTarget:self action:@selector(tapOnBtn:) forControlEvents:UIControlEventTouchUpInside];
-            
-            [self addSubview:_newsBtn];
-        }
+  
     }
     return self;
 }
+
+
+-(void)showTab
+{
+    __count = [self.configArray count];
+    UIEdgeInsets originInsets = CUSTOM_TABBAR_ORIGIN_INSETS;
+    
+    if (__count==0) {
+        return;
+    }
+    int _width = 320/[self.configArray count];
+    
+    
+    int i = 1;
+    
+    highlightView = [[UIImageView alloc] init];
+    highlightView.frame = CGRectMake(0, 20, 320/5, 29);
+    
+    [highlightView setImage:[UIImage imageNamed:[NSString stringWithFormat:@"%@/%@",bundleName,@"bglight.png"]]];
+    
+    [self addSubview:highlightView];
+    
+    for (NSDictionary *d in self.configArray) {
+        NSString *defaultImg = [NSString stringWithFormat:@"%@/%@",self.bundleName,(NSString *)[d objectForKey:@"default"]];
+        NSString *selectedImg = [NSString stringWithFormat:@"%@/%@",self.bundleName,(NSString *)[d objectForKey:@"selected"]];
+        
+        UIButton  *_newsBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        _newsBtn.tag = 10357+i;
+        _newsBtn.frame = CGRectMake(_width*(i - 1), 0, _width, 49);
+        [_newsBtn setImage:[UIImage imageNamed:defaultImg] forState:UIControlStateNormal];
+        [_newsBtn setImage:[UIImage imageNamed:selectedImg] forState:UIControlStateSelected];
+        [_newsBtn setOpaque:NO];
+        _newsBtn.contentEdgeInsets = originInsets;
+        
+        i++;
+        
+        [_newsBtn addTarget:self action:@selector(tapOnBtn:) forControlEvents:UIControlEventTouchUpInside];
+        
+        [self addSubview:_newsBtn];
+    }
+}
+
+//
+//- (id)initWithFrame:(CGRect)frame andBundleName:(NSString *)bundleName andConfigArray:(NSArray *)configArray
+//{
+//    self = [super initWithFrame:frame];
+//    if (self) {
+//        
+//        __count = [configArray count];
+//        UIEdgeInsets originInsets = CUSTOM_TABBAR_ORIGIN_INSETS;
+//        
+//        
+//        int _width = 320/[configArray count];
+//        
+//        
+//        int i = 1;
+//        
+//        highlightView = [[UIImageView alloc] init];
+//        highlightView.frame = CGRectMake(0, 20, 320/5, 29);
+//        
+//        [highlightView setImage:[UIImage imageNamed:[NSString stringWithFormat:@"%@/%@",bundleName,@"bglight.png"]]];
+//        
+//        [self addSubview:highlightView];
+//        
+//        for (NSDictionary *d in configArray) {
+//            NSString *defaultImg = [NSString stringWithFormat:@"%@/%@",bundleName,(NSString *)[d objectForKey:@"default"]];
+//            NSString *selectedImg = [NSString stringWithFormat:@"%@/%@",bundleName,(NSString *)[d objectForKey:@"selected"]];
+//            
+//            UIButton  *_newsBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+//            _newsBtn.tag = 10357+i;
+//            _newsBtn.frame = CGRectMake(_width*(i - 1), 0, _width, 49);
+//            [_newsBtn setImage:[UIImage imageNamed:defaultImg] forState:UIControlStateNormal];
+//            [_newsBtn setImage:[UIImage imageNamed:selectedImg] forState:UIControlStateSelected];
+//            [_newsBtn setOpaque:NO];
+//            _newsBtn.contentEdgeInsets = originInsets;
+//            
+//            i++;
+//            
+//            [_newsBtn addTarget:self action:@selector(tapOnBtn:) forControlEvents:UIControlEventTouchUpInside];
+//            
+//            [self addSubview:_newsBtn];
+//        }
+//    }
+//    return self;
+//}
 
 - (void)selectTabAtCompletion:(int)index{
     
