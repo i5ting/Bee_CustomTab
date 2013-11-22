@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>33ABF773-18F0-4EBE-9A9E-2218CDE13CF0</string>
+	<key>IDESourceControlProjectName</key>
+	<string>SimpleEKDemo</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>5EF61699-AD3D-4800-89ED-A7B62267E780</key>
+		<string>https://github.com/i5ting/no320_CustomTab.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>SimpleEKDemo.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>5EF61699-AD3D-4800-89ED-A7B62267E780</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/i5ting/no320_CustomTab.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>5EF61699-AD3D-4800-89ED-A7B62267E780</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>5EF61699-AD3D-4800-89ED-A7B62267E780</string>
+			<key>IDESourceControlWCCName</key>
+			<string>no320_CustomTab</string>
+		</dict>
+	</array>
+</dict>
+</plist>
