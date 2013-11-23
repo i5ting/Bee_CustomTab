@@ -69,7 +69,7 @@
 //    CustomTabBarViewController *tabbarController = [[CustomTabBarViewController alloc] initWithBundleName:@"xiangqu"];
     self.window.frame = CGRectMake(0, 0, 320, UI_MAX_HEIGHT);
     self.window.rootViewController = tabbarController;
-    [tabbarController release];
+//    [tabbarController release];
     
     
 //    NSBundle *goodBundle;
@@ -94,9 +94,9 @@
 #pragma mark Memory management
 
 - (void)dealloc {
-	[navigationController release];
-	[window release];
-	[super dealloc];
+//	[navigationController release];
+//	[window release];
+//	[super dealloc];
 }
 
 

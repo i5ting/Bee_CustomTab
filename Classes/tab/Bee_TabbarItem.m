@@ -12,17 +12,7 @@
 #define CUSTOM_TABBAR_ORIGIN_INSETS UIEdgeInsetsMake(1.0,3.0,3.0,3.0)
 
 @implementation Bee_TabbarItem
-@synthesize indicator0;
-@synthesize indicator1;
-@synthesize indicator2;
-@synthesize indicator3;
-@synthesize updateLabel0;
-@synthesize updateLabel1;
-@synthesize updateLabel2;
-@synthesize updateLabel3;
 
-@synthesize delegate;
-@synthesize newsBtn;
 
 @synthesize highlightView;
 
@@ -51,7 +41,7 @@
             NSString *defaultImg = [NSString stringWithFormat:@"%@/%@",bundleName,(NSString *)[d objectForKey:@"default"]];
             NSString *selectedImg = [NSString stringWithFormat:@"%@/%@",bundleName,(NSString *)[d objectForKey:@"selected"]];
             
-            UIButton  *_newsBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+            _newsBtn = [UIButton buttonWithType:UIButtonTypeCustom];
             _newsBtn.tag = 10357+i;
             _newsBtn.frame = CGRectMake(_width*(i - 1), 0, _width, 49);
             [_newsBtn setImage:[UIImage imageNamed:defaultImg] forState:UIControlStateNormal];
@@ -73,7 +63,7 @@
     return self;
 }
 
-- (void)sss:(int)index{
+- (void)setSelected:(int)index{
     
     for (int i = 0; i < __count; i++) {
         UIButton *_cur_btn = (UIButton *)[self viewWithTag:10358+i];
@@ -114,7 +104,7 @@
         self.highlightView.frame = f;
         
     }completion: ^(BOOL finished){
-        [self sss:index];
+        [self setSelected:index];
     }];
     
     [UIView commitAnimations];
@@ -122,27 +112,28 @@
 }
 
 - (void)tapOnNewsBtn:(UIButton *)sender {
-    if (delegate && [delegate respondsToSelector:@selector(customTabbar:didSelectTab:)]) {
+    if (_delegate && [_delegate respondsToSelector:@selector(customTabbar:didSelectTab:)]) {
         int i = sender.tag - 10358;
         NSLog(@"【 tapOnNewsBtn 】 current tag :=%d",i);
-        [delegate customTabbar:self didSelectTab:i];
+        [_delegate customTabbar:self didSelectTab:i];
     }
+    
     self.indicator0.hidden = YES;
     self.updateLabel0.hidden = YES;
 }
 
 - (void)dealloc {
-    [newsBtn release];
-    
-    [highlightView release];
-    [indicator0 release];
-    [indicator1 release];
-    [indicator2 release];
-    [indicator3 release];
-    [updateLabel0 release];
-    [updateLabel1 release];
-    [updateLabel2 release];
-    [updateLabel3 release];
-    [super dealloc];
+//    [newsBtn release];
+//    
+//    [highlightView release];
+//    [indicator0 release];
+//    [indicator1 release];
+//    [indicator2 release];
+//    [indicator3 release];
+//    [updateLabel0 release];
+//    [updateLabel1 release];
+//    [updateLabel2 release];
+//    [updateLabel3 release];
+//    [super dealloc];
 }
 @end

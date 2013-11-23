@@ -15,19 +15,19 @@
     int __count;
 }
 
-@property (nonatomic, assign) id<CustomTabbarDelegate> delegate;
-@property (retain, nonatomic) IBOutlet UIButton *newsBtn;
+@property (nonatomic, weak) id<CustomTabbarDelegate> delegate;
+@property (strong, nonatomic) UIButton *newsBtn;
 
-@property (retain, nonatomic) IBOutlet UIImageView *highlightView;
+@property (strong, nonatomic) UIImageView *highlightView;
 
-@property (retain, nonatomic) IBOutlet UIImageView *indicator0;
-@property (retain, nonatomic) IBOutlet UIImageView *indicator1;
-@property (retain, nonatomic) IBOutlet UIImageView *indicator2;
-@property (retain, nonatomic) IBOutlet UIImageView *indicator3;
-@property (retain, nonatomic) IBOutlet UILabel *updateLabel0;
-@property (retain, nonatomic) IBOutlet UILabel *updateLabel1;
-@property (retain, nonatomic) IBOutlet UILabel *updateLabel2;
-@property (retain, nonatomic) IBOutlet UILabel *updateLabel3;
+@property (strong, nonatomic) UIImageView *indicator0;
+@property (strong, nonatomic) UIImageView *indicator1;
+@property (strong, nonatomic) UIImageView *indicator2;
+@property (strong, nonatomic) UIImageView *indicator3;
+@property (strong, nonatomic) UILabel *updateLabel0;
+@property (strong, nonatomic) UILabel *updateLabel1;
+@property (strong, nonatomic) UILabel *updateLabel2;
+@property (strong, nonatomic) UILabel *updateLabel3;
 
 - (void)selectTabAtIndex:(int)index;
 - (id)initWithFrame:(CGRect)frame andBundleName:(NSString *)bundleName andConfigArray:(NSArray *)configArray;

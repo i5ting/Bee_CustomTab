@@ -145,18 +145,18 @@
     }
 }
 
-- (void)dealloc {
-    [highlightView release];
-    [indicator0 release];
-    [indicator1 release];
-    [indicator2 release];
-    [indicator3 release];
-    [updateLabel0 release];
-    [updateLabel1 release];
-    [updateLabel2 release];
-    [updateLabel3 release];
-    [super dealloc];
-}
+//- (void)dealloc {
+//    [highlightView release];
+//    [indicator0 release];
+//    [indicator1 release];
+//    [indicator2 release];
+//    [indicator3 release];
+//    [updateLabel0 release];
+//    [updateLabel1 release];
+//    [updateLabel2 release];
+//    [updateLabel3 release];
+//    [super dealloc];
+//}
 
 #pragma mark - delay
 

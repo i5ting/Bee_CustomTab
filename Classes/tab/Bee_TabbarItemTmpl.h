@@ -21,19 +21,19 @@
 // _customView = [[Bee_TabbarItem1 alloc] initWithFrame:CGRectMake(0, 0, 320, 44) andBundleName:__bundleName andConfigArray:__controllerArray];
 
 @property (assign, nonatomic) CGRect viewframe;
-@property (retain, nonatomic) NSArray *configArray;
-@property (retain, nonatomic) NSString *bundleName;
+@property (strong, nonatomic) NSArray *configArray;
+@property (strong, nonatomic) NSString *bundleName;
 
-@property (retain, nonatomic) IBOutlet UIImageView *highlightView;
+@property (strong, nonatomic) UIImageView *highlightView;
 
-@property (retain, nonatomic) IBOutlet UIImageView *indicator0;
-@property (retain, nonatomic) IBOutlet UIImageView *indicator1;
-@property (retain, nonatomic) IBOutlet UIImageView *indicator2;
-@property (retain, nonatomic) IBOutlet UIImageView *indicator3;
-@property (retain, nonatomic) IBOutlet UILabel *updateLabel0;
-@property (retain, nonatomic) IBOutlet UILabel *updateLabel1;
-@property (retain, nonatomic) IBOutlet UILabel *updateLabel2;
-@property (retain, nonatomic) IBOutlet UILabel *updateLabel3;
+@property (strong, nonatomic) UIImageView *indicator0;
+@property (strong, nonatomic) UIImageView *indicator1;
+@property (strong, nonatomic) UIImageView *indicator2;
+@property (strong, nonatomic) UIImageView *indicator3;
+@property (strong, nonatomic) UILabel *updateLabel0;
+@property (strong, nonatomic) UILabel *updateLabel1;
+@property (strong, nonatomic) UILabel *updateLabel2;
+@property (strong, nonatomic) UILabel *updateLabel3;
 
 
 -(void)showTab;

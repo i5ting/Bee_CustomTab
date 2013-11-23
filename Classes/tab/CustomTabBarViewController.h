@@ -20,7 +20,8 @@
 @end
 
 
-@interface CustomTabBarViewController : UITabBarController<UITabBarControllerDelegate,CustomTabbarDelegate> {
+@interface CustomTabBarViewController : UITabBarController<UITabBarControllerDelegate,CustomTabbarDelegate>
+{
 	UIView *_contentView;
     Bee_TabbarItemTmpl *_customView; 
     UIImageView *bgView;
@@ -36,13 +37,13 @@
 
 -(id)initWithJSON:(NSString *)json_file_name;
 -(id)initWithBundleName:(NSString *)bundle_file_name;
-
-+ (CustomTabBarViewController*)sharedTabBarController;
 - (void)selectTab:(int)tabID;
-+(BOOL)isHidden;
 //获取当前的ViewController
 - (UIViewController *)getShowingViewController;
 
+
++ (CustomTabBarViewController*)sharedTabBarController;
++(BOOL)isHidden;
 + (void)hide:(BOOL)bHide animated:(BOOL)bAnimated;
 
 @end

@@ -18,12 +18,12 @@
 #pragma mark Memory management
 
 - (void)dealloc {
-	[eventStore release];
-	[eventsList release];
-	[defaultCalendar release];
-	[detailViewController release];
-
-	[super dealloc];
+//	[eventStore release];
+//	[eventsList release];
+//	[defaultCalendar release];
+//	[detailViewController release];
+//
+//	[super dealloc];
 }
 
 
@@ -45,7 +45,7 @@
 	UIBarButtonItem *addButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:
 							    UIBarButtonSystemItemAdd target:self action:@selector(addEvent:)];
 	self.navigationItem.rightBarButtonItem = addButtonItem;
-	[addButtonItem release];
+//	[addButtonItem release];
 	
 	
 	self.navigationController.delegate = self;
@@ -115,8 +115,8 @@
 	
 	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
 	if (cell == nil) {
-		cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault 
-								 reuseIdentifier:CellIdentifier] autorelease];
+		cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
+								 reuseIdentifier:CellIdentifier] ;
 	}
 	
 	cell.accessoryType = editableCellAccessoryType;
@@ -179,7 +179,7 @@
 	[self presentModalViewController:addController animated:YES];
 	
 	addController.editViewDelegate = self;
-	[addController release];
+//	[addController release];
 }
 
 

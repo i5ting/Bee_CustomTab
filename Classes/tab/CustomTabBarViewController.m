@@ -5,8 +5,6 @@
 //
 
 #import "CustomTabBarViewController.h"
-#import "RootViewController.h"
-#import "sssViewController.h"
 #import "JSONKit.h"
 
 //改用 UI_MAX_HEIGHT 处理，兼容iphone5
@@ -16,12 +14,10 @@
 #define TAB_CONTROLLER_TAB_HEIGHT 44.0f
 
 
-
-
 @interface CustomTabBarViewController()
 - (void)hideTabBar;
 - (void)addCustomElements;
-- (void)offlineDownload;
+//- (void)offlineDownload;
 - (void)hide:(BOOL)hidden withAnimation:(BOOL)isAnimation;
 @end 
 
@@ -33,7 +29,6 @@
 }
 
 @end
-
 
 @implementation CustomTabBarViewController
 @synthesize customView = _customView;
@@ -99,16 +94,18 @@ static CustomTabBarViewController *_tabBarInstance;
 //    _customView = [[Bee_TabbarItem1 alloc] initWithFrame:CGRectMake(0, 0, 320, 44) andBundleName:__bundleName andConfigArray:__controllerArray];
     
     _customView = [[Bee_TabbarItem1 alloc] init];
-    [_customView setViewframe:CGRectMake(0, 0, 320, 44) ];
+    _customView.delegate = self;
+    _customView.frame = CGRectMake(0, UI_MAX_HEIGHT - TAB_CONTROLLER_TAB_HEIGHT, 320, TAB_CONTROLLER_TAB_HEIGHT);
+    
+//    [_customView setViewframe:CGRectMake(0, 0, 320, 44) ];
     [_customView setConfigArray:__controllerArray];
     [_customView setBundleName:__bundleName];
     
     [_customView showTab];
     [_customView selectTabAtIndex:0];
-    _customView.delegate = self;
-    _customView.frame = CGRectMake(0, UI_MAX_HEIGHT - TAB_CONTROLLER_TAB_HEIGHT, 320, TAB_CONTROLLER_TAB_HEIGHT);
+    
     [self.view addSubview:_customView];
-    [self selectTab:0];
+//    [self selectTab:0];
 }
 
 -(void)hide:(BOOL)hidden withAnimation:(BOOL)isAnimation{
@@ -187,7 +184,6 @@ static CustomTabBarViewController *_tabBarInstance;
     return self;
 }
 
-
 - (void)viewDidLoad {
     [super viewDidLoad];
 	[self hideTabBar];	
@@ -196,7 +192,7 @@ static CustomTabBarViewController *_tabBarInstance;
 
 - (void)viewDidUnload
 {
-    [_customView release];
+//    [_customView release];
     _customView = nil;
     [super viewDidUnload];
 }
@@ -215,9 +211,9 @@ static CustomTabBarViewController *_tabBarInstance;
 }
 
 - (void)dealloc{
-    RELEASE_SAFELY(_customView);
-    RELEASE_SAFELY(bgView);
-    [super dealloc];
+//    RELEASE_SAFELY(_customView);
+//    RELEASE_SAFELY(bgView);
+//    [super dealloc];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -289,7 +285,7 @@ static CustomTabBarViewController *_tabBarInstance;
     
     for (NSDictionary *d in  __controllerArray) {
         id _myViewController = [[NSClassFromString((NSString *)[d objectForKey:@"controllerName"]) alloc] init];
-        UINavigationController *topicNavigationController = [[[UINavigationController alloc] initWithRootViewController:_myViewController] autorelease];
+        UINavigationController *topicNavigationController = [[UINavigationController alloc] initWithRootViewController:_myViewController];
         topicNavigationController.navigationBar.hidden = YES;
         [_controllersArray addObject:topicNavigationController];
     }
