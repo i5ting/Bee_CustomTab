@@ -52,6 +52,7 @@ static CustomTabBarViewController *_tabBarInstance;
 
 #pragma mark - CustomTabBarDelegate
 - (void)customTabbar:(Bee_TabbarItemTmpl*)customTabbar didSelectTab:(int)tabIndex{
+    return;
     //    [customTabbar selectTabAtIndex:tabIndex];
     //    self.selectedIndex = tabIndex;
     [self selectTab:tabIndex];
@@ -91,7 +92,6 @@ static CustomTabBarViewController *_tabBarInstance;
     if (__controllerArray == nil) {
         return;
     }
-//    _customView = [[Bee_TabbarItem1 alloc] initWithFrame:CGRectMake(0, 0, 320, 44) andBundleName:__bundleName andConfigArray:__controllerArray];
     
     _customView = [[Bee_TabbarItem1 alloc] init];
     _customView.delegate = self;
@@ -102,10 +102,10 @@ static CustomTabBarViewController *_tabBarInstance;
     [_customView setBundleName:__bundleName];
     
     [_customView showTab];
-    [_customView selectTabAtIndex:0];
+//    [_customView selectTabAtIndex:0];
     
     [self.view addSubview:_customView];
-//    [self selectTab:0];
+    [self selectTab:0];
 }
 
 -(void)hide:(BOOL)hidden withAnimation:(BOOL)isAnimation{
@@ -198,11 +198,11 @@ static CustomTabBarViewController *_tabBarInstance;
 }
 
 - (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear: animated];
+//    [super viewWillAppear: animated];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
+//    [super viewDidAppear:animated];
 }
 
 - (void)didReceiveMemoryWarning
@@ -288,6 +288,9 @@ static CustomTabBarViewController *_tabBarInstance;
         UINavigationController *topicNavigationController = [[UINavigationController alloc] initWithRootViewController:_myViewController];
         topicNavigationController.navigationBar.hidden = YES;
         [_controllersArray addObject:topicNavigationController];
+        
+        _myViewController = nil;
+        topicNavigationController = nil;
     }
     
     __controllerArray = _controllersArray;

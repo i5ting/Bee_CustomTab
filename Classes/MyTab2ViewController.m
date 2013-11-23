@@ -27,6 +27,21 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    
+    UIButton *b = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    [b setTitle:@"va" forState:UIControlStateNormal];
+    
+    b.frame = CGRectMake(0, 100, 320, 40);
+    [b addTarget:self action:@selector(identi) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:b];
+    
+    b = nil;
+    
+}
+
+-(void)identi{
+
+
 }
 
 - (void)didReceiveMemoryWarning

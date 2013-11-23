@@ -132,6 +132,7 @@
 }
 
 - (void)tapOnBtn:(UIButton *)sender {
+    return;
     int i = sender.tag - 10358;
     if (delegate && [delegate respondsToSelector:@selector(customTabbar:didSelectTab:)]) {
         NSLog(@"【 tapOnNewsBtn 】 current tag :=%d",i);

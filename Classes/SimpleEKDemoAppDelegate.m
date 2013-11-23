@@ -50,6 +50,8 @@
 #import "RootViewController.h"
 #import "CustomTabBarViewController.h"
 
+#import "MyTab2ViewController.h"
+
 @implementation SimpleEKDemoAppDelegate
 
 @synthesize window;
@@ -67,8 +69,11 @@
     
         CustomTabBarViewController *tabbarController = [[CustomTabBarViewController alloc] initWithBundleName:@"finiance1"];
 //    CustomTabBarViewController *tabbarController = [[CustomTabBarViewController alloc] initWithBundleName:@"xiangqu"];
+    
+    
+    MyTab2ViewController *f = [[MyTab2ViewController alloc] init];
     self.window.frame = CGRectMake(0, 0, 320, UI_MAX_HEIGHT);
-    self.window.rootViewController = tabbarController;
+    self.window.rootViewController = f;
 //    [tabbarController release];
     
     
