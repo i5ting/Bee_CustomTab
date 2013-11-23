@@ -20,6 +20,7 @@
     if (self) {
         // Custom initialization
         [self setTitle:@"second level"];
+        self.navigationController.navigationBarHidden = YES;
     }
     return self;
 }
@@ -30,6 +31,8 @@
     // Do any additional setup after loading the view from its nib.
      
     self.title = @"My Title";
+    
+            self.navigationController.navigationBarHidden = YES;
 }
 
 - (void)didReceiveMemoryWarning
