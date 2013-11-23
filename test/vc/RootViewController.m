@@ -7,6 +7,7 @@
 //
 
 #import "RootViewController.h"
+#import "RootSecondViewController.h"
 
 @interface RootViewController ()
 - (IBAction)first:(id)sender;
@@ -20,6 +21,8 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+        [self setTitle:@"root level"];
+  
     }
     return self;
 }
@@ -29,13 +32,30 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
+  
+ 
+  
+    self.view.backgroundColor = [UIColor redColor];
+    self.navigationController.navigationBarHidden = NO;
+    
+ 
+    
     UIButton *b = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     [b setTitle:@"va" forState:UIControlStateNormal];
     
-    b.frame = CGRectMake(0, 100, 320, 40);
-    [b addTarget:self action:@selector(identi) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:b];
+     [self setTitle:@"root level"];
+     self.title = @"My Title";
+//    
+//    b.frame = CGRectMake(0, 100, 320, 40);
+//    [b addTarget:self action:@selector(identi) forControlEvents:UIControlEventTouchUpInside];
+//    [self.view addSubview:b];
     
+    
+    
+    UIButton *button = [UIButton buttonWithType: UIButtonTypeRoundedRect];
+    [button setTitle: @"自定义title" forState: UIControlStateNormal];
+    [button sizeToFit];
+    self.navigationItem.titleView = button;
 }
 
 -(void)identi{
@@ -50,15 +70,7 @@
 }
 
 - (IBAction)first:(id)sender {
-    
-    NSString *str = [[NSString alloc] initWithFormat:@"%@",@"ddd"];
-    
-    for (int i=0; i<100000; i++) {
-        UIViewController *c = [[UIViewController alloc] init];
-        
-          
-    }
-    
-    NSLog(@"dddd");
+    RootSecondViewController *rs = [[RootSecondViewController alloc] init];
+    [self.navigationController pushViewController:rs animated:YES];
 }
 @end

@@ -286,7 +286,7 @@ static CustomTabBarViewController *_tabBarInstance;
     for (NSDictionary *d in  __controllerArray) {
         id _myViewController = [[NSClassFromString((NSString *)[d objectForKey:@"controllerName"]) alloc] init];
         UINavigationController *topicNavigationController = [[UINavigationController alloc] initWithRootViewController:_myViewController];
-        topicNavigationController.navigationBar.hidden = YES;
+        topicNavigationController.navigationBar.hidden = NO;
         [_controllersArray addObject:topicNavigationController];
         
         _myViewController = nil;

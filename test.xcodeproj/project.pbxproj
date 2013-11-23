@@ -19,8 +19,6 @@
 		25D0F2E41840097B00BD933E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25D0F2CC1840097A00BD933E /* UIKit.framework */; };
 		25D0F2EC1840097B00BD933E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 25D0F2EA1840097B00BD933E /* InfoPlist.strings */; };
 		25D0F2EE1840097B00BD933E /* testTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 25D0F2ED1840097B00BD933E /* testTests.m */; };
-		25D0F2FA1840099500BD933E /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25D0F2F81840099500BD933E /* RootViewController.m */; };
-		25D0F2FB1840099500BD933E /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25D0F2F91840099500BD933E /* RootViewController.xib */; };
 		25F67EE018411D69009DA0A9 /* Bee_TabbarItem1.m in Sources */ = {isa = PBXBuildFile; fileRef = 25F67ED318411D69009DA0A9 /* Bee_TabbarItem1.m */; };
 		25F67EE118411D69009DA0A9 /* Bee_TabbarItemTmpl.m in Sources */ = {isa = PBXBuildFile; fileRef = 25F67ED518411D69009DA0A9 /* Bee_TabbarItemTmpl.m */; };
 		25F67EE218411D69009DA0A9 /* config.json in Resources */ = {isa = PBXBuildFile; fileRef = 25F67ED618411D69009DA0A9 /* config.json */; };
@@ -30,8 +28,12 @@
 		25F67EE618411D69009DA0A9 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 25F67EDE18411D69009DA0A9 /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		25F67EE718411D69009DA0A9 /* xiangqu.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 25F67EDF18411D69009DA0A9 /* xiangqu.bundle */; };
 		25F67EE918412153009DA0A9 /* finiance1.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 25F67EE818412153009DA0A9 /* finiance1.bundle */; };
-		25F67EED184121A8009DA0A9 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25F67EEB184121A8009DA0A9 /* SecondViewController.m */; };
-		25F67EEE184121A8009DA0A9 /* SecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25F67EEC184121A8009DA0A9 /* SecondViewController.xib */; };
+		25F67F25184160E3009DA0A9 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25F67F20184160E3009DA0A9 /* RootViewController.m */; };
+		25F67F26184160E3009DA0A9 /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25F67F21184160E3009DA0A9 /* RootViewController.xib */; };
+		25F67F27184160E3009DA0A9 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25F67F23184160E3009DA0A9 /* SecondViewController.m */; };
+		25F67F28184160E3009DA0A9 /* SecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25F67F24184160E3009DA0A9 /* SecondViewController.xib */; };
+		25F67F2D1841610A009DA0A9 /* RootSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25F67F2B1841610A009DA0A9 /* RootSecondViewController.m */; };
+		25F67F2E1841610A009DA0A9 /* RootSecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25F67F2C1841610A009DA0A9 /* RootSecondViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,9 +63,6 @@
 		25D0F2E91840097B00BD933E /* testTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "testTests-Info.plist"; sourceTree = "<group>"; };
 		25D0F2EB1840097B00BD933E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		25D0F2ED1840097B00BD933E /* testTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = testTests.m; sourceTree = "<group>"; };
-		25D0F2F71840099500BD933E /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
-		25D0F2F81840099500BD933E /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
-		25D0F2F91840099500BD933E /* RootViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RootViewController.xib; sourceTree = "<group>"; };
 		25F67ED218411D69009DA0A9 /* Bee_TabbarItem1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bee_TabbarItem1.h; sourceTree = "<group>"; };
 		25F67ED318411D69009DA0A9 /* Bee_TabbarItem1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bee_TabbarItem1.m; sourceTree = "<group>"; };
 		25F67ED418411D69009DA0A9 /* Bee_TabbarItemTmpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bee_TabbarItemTmpl.h; sourceTree = "<group>"; };
@@ -78,9 +77,15 @@
 		25F67EDE18411D69009DA0A9 /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
 		25F67EDF18411D69009DA0A9 /* xiangqu.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = xiangqu.bundle; sourceTree = "<group>"; };
 		25F67EE818412153009DA0A9 /* finiance1.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = finiance1.bundle; sourceTree = "<group>"; };
-		25F67EEA184121A8009DA0A9 /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		25F67EEB184121A8009DA0A9 /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
-		25F67EEC184121A8009DA0A9 /* SecondViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SecondViewController.xib; sourceTree = "<group>"; };
+		25F67F1F184160E3009DA0A9 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		25F67F20184160E3009DA0A9 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		25F67F21184160E3009DA0A9 /* RootViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RootViewController.xib; sourceTree = "<group>"; };
+		25F67F22184160E3009DA0A9 /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		25F67F23184160E3009DA0A9 /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		25F67F24184160E3009DA0A9 /* SecondViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SecondViewController.xib; sourceTree = "<group>"; };
+		25F67F2A1841610A009DA0A9 /* RootSecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootSecondViewController.h; sourceTree = "<group>"; };
+		25F67F2B1841610A009DA0A9 /* RootSecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootSecondViewController.m; sourceTree = "<group>"; };
+		25F67F2C1841610A009DA0A9 /* RootSecondViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RootSecondViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,17 +145,12 @@
 		25D0F2CE1840097A00BD933E /* test */ = {
 			isa = PBXGroup;
 			children = (
+				25F67F1E184160E3009DA0A9 /* vc */,
 				25F67ED118411D69009DA0A9 /* tab */,
 				25D0F2D71840097A00BD933E /* AppDelegate.h */,
 				25D0F2D81840097A00BD933E /* AppDelegate.m */,
 				25D0F2DA1840097A00BD933E /* Images.xcassets */,
 				25D0F2CF1840097A00BD933E /* Supporting Files */,
-				25D0F2F71840099500BD933E /* RootViewController.h */,
-				25D0F2F81840099500BD933E /* RootViewController.m */,
-				25D0F2F91840099500BD933E /* RootViewController.xib */,
-				25F67EEA184121A8009DA0A9 /* SecondViewController.h */,
-				25F67EEB184121A8009DA0A9 /* SecondViewController.m */,
-				25F67EEC184121A8009DA0A9 /* SecondViewController.xib */,
 			);
 			path = test;
 			sourceTree = "<group>";
@@ -211,6 +211,30 @@
 				25F67EDE18411D69009DA0A9 /* JSONKit.m */,
 			);
 			path = JSONKit;
+			sourceTree = "<group>";
+		};
+		25F67F1E184160E3009DA0A9 /* vc */ = {
+			isa = PBXGroup;
+			children = (
+				25F67F29184160F8009DA0A9 /* second */,
+				25F67F1F184160E3009DA0A9 /* RootViewController.h */,
+				25F67F20184160E3009DA0A9 /* RootViewController.m */,
+				25F67F21184160E3009DA0A9 /* RootViewController.xib */,
+				25F67F22184160E3009DA0A9 /* SecondViewController.h */,
+				25F67F23184160E3009DA0A9 /* SecondViewController.m */,
+				25F67F24184160E3009DA0A9 /* SecondViewController.xib */,
+			);
+			path = vc;
+			sourceTree = "<group>";
+		};
+		25F67F29184160F8009DA0A9 /* second */ = {
+			isa = PBXGroup;
+			children = (
+				25F67F2A1841610A009DA0A9 /* RootSecondViewController.h */,
+				25F67F2B1841610A009DA0A9 /* RootSecondViewController.m */,
+				25F67F2C1841610A009DA0A9 /* RootSecondViewController.xib */,
+			);
+			path = second;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -288,15 +312,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				25F67F2E1841610A009DA0A9 /* RootSecondViewController.xib in Resources */,
 				25F67EE418411D69009DA0A9 /* CustomTabBar1.bundle in Resources */,
 				25D0F2D31840097A00BD933E /* InfoPlist.strings in Resources */,
+				25F67F26184160E3009DA0A9 /* RootViewController.xib in Resources */,
 				25F67EE718411D69009DA0A9 /* xiangqu.bundle in Resources */,
 				25F67EE318411D69009DA0A9 /* CustomTabBar.bundle in Resources */,
+				25F67F28184160E3009DA0A9 /* SecondViewController.xib in Resources */,
 				25F67EE218411D69009DA0A9 /* config.json in Resources */,
-				25F67EEE184121A8009DA0A9 /* SecondViewController.xib in Resources */,
 				25D0F2DB1840097A00BD933E /* Images.xcassets in Resources */,
 				25F67EE918412153009DA0A9 /* finiance1.bundle in Resources */,
-				25D0F2FB1840099500BD933E /* RootViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -316,11 +341,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				25D0F2D91840097A00BD933E /* AppDelegate.m in Sources */,
+				25F67F25184160E3009DA0A9 /* RootViewController.m in Sources */,
 				25F67EE518411D69009DA0A9 /* CustomTabBarViewController.m in Sources */,
 				25D0F2D51840097A00BD933E /* main.m in Sources */,
+				25F67F27184160E3009DA0A9 /* SecondViewController.m in Sources */,
 				25F67EE118411D69009DA0A9 /* Bee_TabbarItemTmpl.m in Sources */,
-				25F67EED184121A8009DA0A9 /* SecondViewController.m in Sources */,
-				25D0F2FA1840099500BD933E /* RootViewController.m in Sources */,
+				25F67F2D1841610A009DA0A9 /* RootSecondViewController.m in Sources */,
 				25F67EE618411D69009DA0A9 /* JSONKit.m in Sources */,
 				25F67EE018411D69009DA0A9 /* Bee_TabbarItem1.m in Sources */,
 			);
@@ -444,6 +470,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "test/test-Prefix.pch";
 				INFOPLIST_FILE = "test/test-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -457,6 +484,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "test/test-Prefix.pch";
 				INFOPLIST_FILE = "test/test-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
