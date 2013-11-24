@@ -8,6 +8,8 @@
 
 #import "RootSecondViewController.h"
 
+#import "CustomTabBarViewController.h"
+
 @interface RootSecondViewController ()
 
 @end
@@ -18,9 +20,9 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
+        // Custom ;
         [self setTitle:@"second level"];
-        self.navigationController.navigationBarHidden = YES;
+//        self.navigationController.navigationBarHidden = YES;
     }
     return self;
 }
@@ -29,10 +31,8 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-     
-    self.title = @"My Title";
     
-            self.navigationController.navigationBarHidden = YES;
+    [CustomTabBarViewController hide:YES animated:YES] ;
 }
 
 - (void)didReceiveMemoryWarning

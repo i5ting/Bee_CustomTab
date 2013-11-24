@@ -197,13 +197,15 @@ static CustomTabBarViewController *_tabBarInstance;
     [super viewDidUnload];
 }
 
-- (void)viewWillAppear:(BOOL)animated {
-//    [super viewWillAppear: animated];
-}
 
-- (void)viewDidAppear:(BOOL)animated {
-//    [super viewDidAppear:animated];
-}
+//
+//- (void)viewWillAppear:(BOOL)animated {
+////    [super viewWillAppear: animated];
+//}
+//
+//- (void)viewDidAppear:(BOOL)animated {
+////    [super viewDidAppear:animated];
+//}
 
 - (void)didReceiveMemoryWarning
 {
@@ -331,5 +333,26 @@ static CustomTabBarViewController *_tabBarInstance;
     NSLog(@"%@:%@",@"CustomTabBarViewController",str);
 }
 
+#pragma mark - 自定义了TabBarController 之后必须实现以下
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    [self.selectedViewController beginAppearanceTransition: YES animated: animated];
+}
+
+-(void) viewDidAppear:(BOOL)animated
+{
+    [self.selectedViewController endAppearanceTransition];
+}
+
+-(void) viewWillDisappear:(BOOL)animated
+{
+    [self.selectedViewController beginAppearanceTransition: NO animated: animated];
+}
+
+-(void) viewDidDisappear:(BOOL)animated
+{
+    [self.selectedViewController endAppearanceTransition];
+}
 
 @end

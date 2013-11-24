@@ -8,6 +8,7 @@
 
 #import "RootViewController.h"
 #import "RootSecondViewController.h"
+#import "CustomTabBarViewController.h"
 
 @interface RootViewController ()
 - (IBAction)first:(id)sender;
@@ -27,30 +28,18 @@
     return self;
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    [CustomTabBarViewController hide:NO animated:YES] ;
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    
-  
- 
-  
-    self.view.backgroundColor = [UIColor redColor];
-    self.navigationController.navigationBarHidden = NO;
-    
- 
-    
-    UIButton *b = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    [b setTitle:@"va" forState:UIControlStateNormal];
-    
-     [self setTitle:@"root level"];
-     self.title = @"My Title";
-//    
-//    b.frame = CGRectMake(0, 100, 320, 40);
-//    [b addTarget:self action:@selector(identi) forControlEvents:UIControlEventTouchUpInside];
-//    [self.view addSubview:b];
-    
-    
+    self.title = @"root";
     
     UIButton *button = [UIButton buttonWithType: UIButtonTypeRoundedRect];
     [button setTitle: @"自定义title" forState: UIControlStateNormal];
